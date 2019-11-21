@@ -1,0 +1,14 @@
+# action.yml
+name: 'Custom sonar scanner'
+description: 'Sonar scanner for pull requests'
+branding:
+  icon: 'check'
+  color: 'green'
+inputs:
+  projectBaseDir:
+    description: 'Set the sonar.projectBaseDir analysis property'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
